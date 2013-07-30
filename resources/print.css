@@ -1,0 +1,131 @@
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 01 June 2013 22:38:33
+*/
+
+
+#preview-message {
+  background: none repeat scroll 0 0 #07204C;
+  color: #FFFFFF;
+  font-family: arial, verdana, helvetica, sans-serif;
+  padding: 15px 10px 20px;
+  text-align: left;
+}
+.header .tools,
+.header .nav-main-wrapper,
+#nav-list,
+.header .social,
+.breadcrumb-wrapper,
+#banner,
+#captionContainer,
+.section-nav-wrapper,
+.colx3 .nav-inside,
+.addthis_toolbox,
+.section-search,
+.related-news .pagination,
+.related-events .pagination,
+.feature-scrollable .pagination,
+.feature .carousel-control,
+.section-footer .more,
+.footer .section-footer .social,
+.global-footer .container,
+.section-banner.profile .enquiry {
+  display: none;
+}
+.colx3 .content-main,
+.colx2 .content-main {
+  width: 60%;
+}
+.colx3 .sidebar,
+.colx2 .sidebar {
+  margin-left: 2%;
+  width: 30%;
+}
+.colx3 .azazel .azazel-filters,
+.colx2 .azazel .azazel-filters {
+  width: 25%;
+}
+.colx3 .azazel .azazel-directory,
+.colx2 .azazel .azazel-directory {
+  margin-left: 3%;
+  width: 70%;
+}
+.header .header-bar {
+  -webkit-box-shadow: 0px 0px 0px transparent;
+  -moz-box-shadow: 0px 0px 0px transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border-bottom: 2px solid #ccc;
+}
+.section-banner {
+  padding-right: 0px;
+  padding-left: 0px;
+  border-bottom: 1px solid #e3e2de;
+}
+.content ul li {
+  padding-left: 0px;
+}
+.inside .content-main .nav-tabs a {
+  color: #aaa;
+}
+.inside.profile .content-main .nav-tabs > .active > a,
+.degree-overview .nav-tabs > .active > a {
+  color: #888;
+  text-decoration: underline;
+}
+.sidebar .feature,
+.features .feature {
+  border: 1px solid #e3e2de;
+  margin-left: 8px;
+}
+.related-news,
+.related-events,
+.feature-scrollable .feature {
+  height: auto;
+}
+.feature.widget h3 {
+  margin-left: 0px;
+  height: auto;
+}
+.features .feature.bckgrnd-blue {
+  border: 1px solid #25589d;
+  margin-left: 8px;
+}
+.features .feature.bckgrnd-blue,
+.bckgrnd-blue a {
+  color: #000;
+}
+.section-footer {
+  border-top: 1px solid #414141;
+  padding-top: 1em;
+}
+.footer .section-footer .contact .col1 {
+  width: auto;
+  margin-left: 0px;
+}
+.landing .content {
+  margin-top: 0px;
+}
+.section-nav .title-container {
+  margin-top: -30px;
+}
+.section-nav h2 {
+  color: #61569b;
+  padding: 0px;
+  margin-left: 0px;
+  width: auto;
+  height: auto;
+}
+.section-nav ul {
+  padding-top: 0px;
+}
+.profile .nav-tabs {
+  margin: 0px 0px 15px;
+}
+.profile .nav-tabs > li {
+  border-right: 0px none;
+}
+.profile .nav-tabs > li:first-child > a {
+  padding-left: 0px;
+}

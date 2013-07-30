@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<!--
+/**
+* +--------------------------------------------------------------------+
+* | This MySource Matrix CMS file is Copyright (c) Squiz Pty Ltd       |
+* | ACN 084 670 600                                                    |
+* +--------------------------------------------------------------------+
+* | IMPORTANT: Your use of this Software is subject to the terms of    |
+* | the Licence provided in the file licence.txt. If you cannot find   |
+* | this file please contact Squiz (www.squiz.net) so we may provide   |
+* | you a copy.                                                        |
+* +--------------------------------------------------------------------+
+*
+* $Id: index.html,v 1.4 2012/01/23 23:20:53 ewang Exp $
+*
+*/
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login - Squiz Matrix</title>
+    <link href="/__lib/web/images/icons/favicon.ico" rel="shortcut icon" />
+    <style type="text/css">
+    
+        * { margin: 0; padding: 0; }
+        
+        body {
+            background: #8FB7DB url(http://publish.newcastle.edu.au/?a=35) repeat;
+            color: #000000;
+            font-family: arial,helvetica,sans-serif;
+            font-size: 12px;
+            margin: 40px 0 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        
+        #login-container {
+            left: 50%;
+            margin-left: -225px;
+            margin-top: -161px;
+            position: absolute;
+            top: 50%;
+            width: 450px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        #title-bar {
+            padding: 5px 19px 10px;
+            -moz-border-radius-topleft: 10px;
+            -moz-border-radius-topright: 10px;
+            -moz-border-radius-bottomright: 0px;
+            -moz-border-radius-bottomleft: 0px;
+            -webkit-border-radius: 10px 10px 0px 0px;
+            border-radius: 10px 10px 0px 0px;
+            background: #333333;
+            background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#555),color-stop(70%,#000));
+            background: -moz-linear-gradient(top,#555 0,#000 70%);
+            background: -ms-linear-gradient(center top , #555555 0pt, #000000 70%);
+            background: linear-gradient(center top , #555555 0pt, #000000 70%);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#555555,endColorstr=#000000);
+        }
+        
+        .content-wrapper {
+            background: url(http://publish.newcastle.edu.au/?a=28) repeat 0 0;
+            -moz-border-radius-topleft: 0px;
+            -moz-border-radius-topright: 0px;
+            -moz-border-radius-bottomright: 10px;
+            -moz-border-radius-bottomleft: 10px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-radius: 0px 0px 10px 10px; 
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto;
+            padding: 20px 47px;
+        }
+        
+        .content-wrapper p {
+            font-weight: bold;
+            margin: 0.5em 0;
+            overflow: hidden;
+            padding: 0 0 5px 6px;
+            width: 326px;
+        }
+        
+        #form-top {
+            background:url(http://publish.newcastle.edu.au/?a=29) repeat scroll 0 0 transparent;
+            height:13px;
+            width:356px;
+        }
+        
+        #login-container form {
+            background:url(http://publish.newcastle.edu.au/?a=31) repeat scroll 0 0 transparent;
+            margin:0;
+            padding:10px 0;
+            width:356px;
+        }
+        
+        #form-bottom {
+            background:url(http://publish.newcastle.edu.au/?a=33) repeat scroll 0 0 transparent;
+            height:13px;
+            width:356px;
+        }
+    
+        #login-container .error {
+            color:#FF0000;
+            font-size:0.9em;
+            font-weight:bold;
+            padding-left:20px;
+        }
+        
+        #login-container input,
+        #login-container label {
+            margin:10px 0 0 10px;
+        }
+        
+        #login-container label {
+            float:left;
+            padding-left:10px;
+            width:100px;
+            line-height: 20px;
+        }
+        
+        #login-container input[type=text], #login-container input[type=password] {
+            width:198px;
+            background-color: #FFFFFF;
+            border: 1px solid #C2C3C5;
+            border-radius: 3px 3px 3px 3px;
+            color: #000000;
+            opacity: 1;
+            padding: 3px 2px;
+        }
+        
+        #login-container input[type=text]:focus, #login-container input[type=password]:focus {
+            border: 1px solid #65A1F1;
+            box-shadow: 0 0 3px #65A1F1;
+        }
+        
+        #login-container #login-button {
+            font-weight: bold;
+            margin: 0.5em 0;
+            overflow: hidden;
+            padding: 0 0 5px 6px;
+            width: 326px;
+        }
+        
+        #login-container input#log_in_out_button {
+            float: right;
+            margin: 15px 3px 0 0;
+            width: 85px;
+            background-color: #848484;
+            background-image: linear-gradient(#A9A9A9, #626161);
+            background-image: -moz-linear-gradient(#A9A9A9, #626161);
+            background-image: -o-linear-gradient(#A9A9A9, #626161);
+            background-image: -webkit-linear-gradient(#A9A9A9, #626161);
+            background-image: -ms-linear-gradient(#A9A9A9, #626161);
+            color: #FFFFFF;
+            text-shadow: 0 -1px 0 #555555;
+            border: 1px solid;
+            border-color: #777777 #606060 #606060;
+            border-radius: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            font-family: Verdana;
+            font-size: 11px;
+            outline: medium none;
+            padding: 2px 0px 4px 0px;    
+        }
+        
+        #login-container input#log_in_out_button:hover {
+            background-image: linear-gradient(#999999, #555555);
+            background-image: -moz-linear-gradient(#999999, #555555);
+            background-image: -o-linear-gradient(#999999, #555555);
+            background-image: -webkit-linear-gradient(#999999, #555555);
+            background-image: -ms-linear-gradient(#999999, #555555);
+            text-shadow: 0px -1px 1px #333333;
+        }
+         
+    </style>
+
+<!--
+  PAGE GENERATED STAMP GOES HERE.
+-->
+
+
+<!--
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 02 June 2013 13:06:21
+-->
+
+
+
+</head>
+<body>
+    <div id="login-container">
+    
+        <div id="title-bar">
+            <img src="http://publish.newcastle.edu.au/?a=34" alt="Squiz Matrix Logo" />
+        </div>
+        <!-- / #title-bar -->
+        
+        <div class="content-wrapper">
+        
+            <p>Enter your username and password to log in</p>
+            
+            <div id="form-top"></div>
+            
+            <!-- Start CMS Login -->
+            					
+                
+                    
+                    
+                    
+                    
+						<form action="/designs/uon-2012/js/jquery.carouFredSel-6.2.1-packed.js?SQ_ACTION=login&amp;" id="login_form_login_prompt" method="post" onsubmit="return checkEntry();">
+					 
+                
+                    <p id="login-error" class="error">
+                       You do not have permission to access the asset. 
+                                           </p>
+                
+                    <label for="SQ_LOGIN_USERNAME">Username</label>
+                    <input type="hidden" name="SQ_LOGIN_KEY"      value="cflwggjkjvrhzqnltvqg" />
+					  <input type="hidden" name="SQ_LOGIN_REFERER"  value="http://publish.newcastle.edu.au/research/centre/csp/about-us" /><input type="text" name="SQ_LOGIN_USERNAME" value="" size="20" onfocus="this.select();" maxlength="60" class="sq-form-field" id="SQ_LOGIN_USERNAME" />
+						<script type="text/javascript"><!--
+						//<![CDATA[
+							var login_form_username_box_other_onload = (window.onload) ? window.onload : new Function;
+							function set_login_form_username_box_focus() {
+								login_form_username_box_other_onload();
+								document.getElementById("login_form_login_prompt").elements["SQ_LOGIN_USERNAME"].focus();
+							}
+							window.onload = set_login_form_username_box_focus;
+						//]]>-->
+						</script>
+					
+                
+                    <label for="SQ_LOGIN_PASSWORD">Password</label>
+                    <input type="password" name="SQ_LOGIN_PASSWORD" value="" size="30" onfocus="this.select();" maxlength="60" class="sq-form-field" id="SQ_LOGIN_PASSWORD" />
+                
+                    <p id="login-button">
+                        <input type="submit" name="log_in_out_button" value="Login"  class="sq-form-field" id="log_in_out_button" />
+                    </p>
+                    
+                    
+					</form>
+					<script type="text/javascript"><!--
+					//<![CDATA[
+						var loginForm = document.forms['login_form_login_prompt'];
+						function checkEntry() {
+							return (loginForm.SQ_LOGIN_USERNAME.value.length > 0 && loginForm.SQ_LOGIN_PASSWORD.value.length > 0);
+						}
+					//]]> -->
+					</script>
+				
+                    
+                
+					            <!-- End CMS Login -->
+            
+            <div id="form-bottom"></div>
+            
+        </div>
+        <!-- / #content-wrapper -->
+        
+    </div>
+    <!-- / #login-container -->
+
+
+
+</body>
+</html>
